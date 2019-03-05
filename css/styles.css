@@ -6,3 +6,10 @@
   margin-top: 2em;
   display: none;
 }
+#points
+{
+  text-align: center;
+}
+#rolPlayer2,#holdPlayer2,#turn1,#turn2{
+  display: none;
+}
