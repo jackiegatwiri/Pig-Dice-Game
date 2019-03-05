@@ -42,3 +42,25 @@ $(document).ready(function()
     $("#person2").text(newPlayer2.name);
     $(".game").toggle();
     $("#rolPlayer1").click(function()
+    {
+      newPlayer1.roll();
+      if (newPlayer1.tempInstance === 1)
+      {
+        newPlayer1.tempScore = 0;
+        $("#rolPlayer1").hide();
+        $("#holdPlayer1").hide();
+        $("#rolPlayer2").show(200);
+        $("#holdPlayer2").show(200);
+        $("#rollDice").text(0)
+        $("#rollPoints").text(0)
+        $("#turn2").hide();
+        $("#turn1").show();
+        $("#rolPlayer2").show();
+        alert("Your dice has rolled on number one, wait until the alternate player takes the round");
+      }
+      else
+      {
+        $("#rollDice").text(newPlayer1.tempInstance);
+        $("#rollPoints").text(newPlayer1.tempScore);
+      }
+    });
