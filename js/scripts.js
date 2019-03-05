@@ -34,3 +34,6 @@ $(document).ready(function()
     var newPlayer2 = new Players(personTwo);
     if (personOne == "" || personTwo == "")
     {
+      alert("Enter names of your Players!!");
+      return;
+    }
