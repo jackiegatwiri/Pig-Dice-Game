@@ -11,3 +11,7 @@ Players.prototype.roll = function()
   this.tempScore += random;
   this.tempInstance = random;
 }
+Players.prototype.addPoints = function()
+{
+  this.totalScore += this.tempScore;
+}
