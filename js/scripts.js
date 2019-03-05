@@ -23,3 +23,5 @@ Players.prototype.won = function()
     location.reload();
   }
 }
+$(document).ready(function()
+{
