@@ -87,3 +87,16 @@ $(document).ready(function()
         $("#rollPoints").text(newPlayer2.tempScore);
       }
     });
+    $("#holdPlayer1").click(function()
+    {
+      newPlayer1.addPoints();
+      $("#totalScoreP1").text(newPlayer1.totalScore);
+      $("#rolPlayer1").hide();
+      $("#rolPlayer2").show();
+      $("#holdPlayer1").hide(200);
+      $("#holdPlayer2").show(200);
+      $("#rollDice").text(0)
+      $("#rollPoints").text(0)
+      newPlayer1.tempScore = 0;
+      newPlayer1.won();
+    });
