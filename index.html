@@ -8,59 +8,58 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Indie+Flower|Kaushan+Script|Rock+Salt" rel="stylesheet">
+
 </head>
 
 <body>
   <div class="container-fluid">
     <h1 id="head">Pig Dice Game</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <h3>Game play Rules</h3>
-        <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
-        <ul>
-          <li>
-            <p>If the player rolls a 1, they score nothing and it becomes the next player's turn.</p>
-          </li>
-          <li>
-            <p>If the player rolls any other number, it is added to their turn total and the player's turn continues.</p>
-          </li>
-          <li>
-            <p>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</p>
-          </li>
-          <p>The first player to score 100 or more points wins.</p>
+    <div class="rules">
+      <h1>Game Play Rules</h1>
+      <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
+      <ul>
+        <li>
+          <p>If the player rolls a 1, they score nothing and it becomes the next player's turn.</p>
+        </li>
+        <li>
+          <p>If the player rolls any other number, it is added to their turn total and the player's turn continues.</p>
+        </li>
+        <li>
+          <p>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</p>
+        </li>
         </ul>
-      </div>
-      <div class="col-md-6">
-        <div class="name">
-          <form>
-            <div class="form-group">
-              <label for="player1">Player 1</label>
-              <input type="text" class="form-control" id="player1" placeholder="Name">
-              <label for="player2">Player 2</label>
-              <input type="text" class="form-control" id="player2" placeholder="Name">
-            </div>
-            <button type="submit" class="btn btn-primary" id="but">play</button>
-          </form>
+        <p>The first player to score 100 or more points wins.</p>
+    </div>
+    <div class="name">
+      <form>
+        <div class="form-group">
+          <label for="player1">Player 1</label>
+          <input type="text" class="form-control" id="player1" placeholder="Name">
+          <label for="player2">Player 2</label>
+          <input type="text" class="form-control" id="player2" placeholder="Name">
         </div>
-      </div>
+        <button type="submit" class="btn btn-primary" id="play">play</button>
+      </form>
     </div>
     <div class="row">
       <div class="col-sm-4" id="readyOne">
         <div class="game">
           <h3>Player One:</h3>
           <h4><span id="person1"></span></h4>
-          <p>score:</p>
+          <h4>score:</h4>
           <p><span id="totalScoreP1"></span></p>
-          <p id="turn1">Next Player</p>
+          <p id="turn1">Next Player's Turn</p>
           <button type="submit" class="btn btn-primary" id="rolPlayer1">Roll</button>
           <button type="submit" class="btn btn-primary" id="holdPlayer1">Hold</button>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="game">
-          <h3>Rolled Dice:</h3>
+          <h3 class="forH3">Rolled Dice:</h3>
           <h1 id="rollDice">0</h1>
-          <h3>Temp Points:</h3>
+          <h3 class="forH3">Temp Points:</h3>
           <h1 id="rollPoints">0</h1>
         </div>
       </div>
@@ -68,9 +67,9 @@
         <div class="game">
           <h3>Player Two:</h3>
           <h4 id="person2"></h4>
-          <p>score:</p>
+          <h4>score:</h4>
           <p><span id="totalScoreP2"></span></p>
-          <p id="turn2">Next Player</p>
+          <p id="turn2">Next Player's Turn</p>
           <button type="submit" class="btn btn-primary" id="rolPlayer2">Roll</button>
           <button type="submit" class="btn btn-primary" id="holdPlayer2">Hold</button>
         </div>

@@ -29,7 +29,7 @@ Players.prototype.reset = function()
 }
 $(document).ready(function()
 {
-  $("#but").click(function(event)
+  $("#play").click(function(event)
   {
     event.preventDefault();
     var personOne = $("#player1").val();
@@ -41,7 +41,8 @@ $(document).ready(function()
       alert("Enter names of your Players!!");
       return;
     }
-    $(".name").toggle();
+    $(".rules").hide();
+    $(".name").hide();
     $("#person1").text(newPlayer1.name);
     $("#person2").text(newPlayer2.name);
     $(".game").toggle();
@@ -101,6 +102,8 @@ $(document).ready(function()
       $("#holdPlayer2").show(200);
       $("#rollDice").text(0)
       $("#rollPoints").text(0)
+      $("#turn2").hide();
+      $("#turn1").show();
       newPlayer1.tempScore = 0;
       newPlayer1.won();
     });
@@ -114,6 +117,8 @@ $(document).ready(function()
       $("#holdPlayer1").show(200);
       $("#rollDice").text(0)
       $("#rollPoints").text(0)
+      $("#turn1").hide();
+      $("#turn2").show();
       newPlayer2.tempScore = 0;
       newPlayer2.won();
     });

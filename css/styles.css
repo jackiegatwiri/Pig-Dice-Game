@@ -1,9 +1,12 @@
 #head {
   text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 1em;
+  color: #a8026f;
 }
 .game
  {
-  margin-top: 2em;
+  margin-top: 10em;
   display: none;
 }
 #points
@@ -12,4 +15,41 @@
 }
 #rolPlayer2,#holdPlayer2,#turn1,#turn2{
   display: none;
+}
+body {
+  background-image: url("https://images.pexels.com/photos/37524/cube-six-gambling-play-37524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+}
+.container-fluid{
+ background-color: rgba(0, 0, 0, 0.5);
+ z-index: auto;
+ color: white;
+ height: 1000px;
+ margin-left: 4em;
+ margin right: 4em;
+}
+.rules{
+  margin-top: 2em;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.5em;
+}
+.rules h1{
+  margin-bottom: 1em;
+}
+.name {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  margin-top: 2em;
+  text-align: center;
+}
+.score {
+  font-size: 1.5em;
+}
+ #person1, #person2{
+color: #a8026f;
+}
+#totalScoreP1, #totalScoreP2, #rollDice, #rollPoints {
+    font-size: 2em;
+    color: #f12d2d;
 }
