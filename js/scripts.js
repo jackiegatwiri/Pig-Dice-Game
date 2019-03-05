@@ -25,3 +25,12 @@ Players.prototype.won = function()
 }
 $(document).ready(function()
 {
+  $("#but").click(function(event)
+  {
+    event.preventDefault();
+    var personOne = $("#player1").val();
+    var personTwo = $("#player2").val();
+    var newPlayer1 = new Players(personOne);
+    var newPlayer2 = new Players(personTwo);
+    if (personOne == "" || personTwo == "")
+    {
