@@ -23,6 +23,10 @@ Players.prototype.won = function()
     location.reload();
   }
 }
+Players.prototype.reset = function()
+{
+  this.totalScore = 0;
+}
 $(document).ready(function()
 {
   $("#but").click(function(event)
