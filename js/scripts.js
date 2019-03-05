@@ -37,3 +37,8 @@ $(document).ready(function()
       alert("Enter names of your Players!!");
       return;
     }
+    $(".name").toggle();
+    $("#person1").text(newPlayer1.name);
+    $("#person2").text(newPlayer2.name);
+    $(".game").toggle();
+    $("#rolPlayer1").click(function()
