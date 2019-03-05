@@ -100,3 +100,18 @@ $(document).ready(function()
       newPlayer1.tempScore = 0;
       newPlayer1.won();
     });
+    $("#holdPlayer2").click(function()
+    {
+      newPlayer2.addPoints();
+      $("#totalScoreP2").text(newPlayer2.totalScore);
+      $("#rolPlayer2").hide();
+      $("#rolPlayer1").show();
+      $("#holdPlayer2").hide(200);
+      $("#holdPlayer1").show(200);
+      $("#rollDice").text(0)
+      $("#rollPoints").text(0)
+      newPlayer2.tempScore = 0;
+      newPlayer2.won();
+    });
+  });
+});
