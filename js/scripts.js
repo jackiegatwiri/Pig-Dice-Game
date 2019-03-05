@@ -15,3 +15,11 @@ Players.prototype.addPoints = function()
 {
   this.totalScore += this.tempScore;
 }
+Players.prototype.won = function()
+{
+  if (this.totalScore >= 100)
+  {
+    alert(this.name + " has won, the game is over");
+    location.reload();
+  }
+}
