@@ -64,3 +64,26 @@ $(document).ready(function()
         $("#rollPoints").text(newPlayer1.tempScore);
       }
     });
+    $("#rolPlayer2").click(function()
+    {
+      newPlayer2.roll();
+      if (newPlayer2.tempInstance === 1)
+      {
+        newPlayer2.tempScore = 0;
+        $("#rolPlayer2").hide();
+        $("#holdPlayer2").hide();
+        $("#rolPlayer1").show(200);
+        $("#holdPlayer1").show(200);
+        $("#rollDice").text(0)
+        $("#rollPoints").text(0)
+        $("#turn1").hide();
+        $("#turn2").show();
+        $("#rolPlayer1").show();
+        alert("Your dice has rolled on number one, wait until the alternate player takes the round");
+      }
+      else
+      {
+        $("#rollDice").text(newPlayer2.tempInstance);
+        $("#rollPoints").text(newPlayer2.tempScore);
+      }
+    });
